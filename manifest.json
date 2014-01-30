@@ -1,0 +1,18 @@
+{"manifest_version": 2,
+  "name": "SSO paylasimlari silici",
+  "version": "2.1",
+  "description": "SSO paylasimlarini friendfeed ana haber sayfasindan siler",
+  "icons": { 
+	"128": "icon128.png",
+      	"32": "icon32.png",
+      	"48": "icon48.png" },
+  "background": {
+     "scripts": ["jquery.min.js", "content.js"]
+  },
+"content_scripts": [ {
+      "all_frames": true,
+      "js": ["jquery.min.js", "content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+  "permissions": ["http://www.friendfeed.com/*","http://friendfeed.com/*" , "tabs"]
+}
